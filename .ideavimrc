@@ -1,0 +1,27 @@
+let mapleader = " "
+
+" map
+imap jj <Esc>
+nnoremap <leader>b :ls<CR>:b<Space>
+nnoremap <leader>e :NERDTreeToggle<CR>
+map <leader>r <Action>(RenameElement)
+map <leader>f <Action>(ReformatCode)
+map <leader>. <Action>(CodeInsightEditorActions)
+map <leader>o <Action>(CloseAllEditorsButActive)
+vmap K :m '<-2<CR>gv=gv
+vmap J :m '>+1<CR>gv=gv
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
+
+" command
+command Only :action CloseAllEditorsButActive<CR>
+
+" set
+set timeoutlen=1000
+set relativenumber
+set showmode
+set incsearch
+
+" plugins
+set NERDTree
+set surround
