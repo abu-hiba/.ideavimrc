@@ -1,13 +1,19 @@
 let mapleader = " "
 
 " map
-imap jj <Esc>
+imap jk <Esc>
 nnoremap <leader>b :ls<CR>:b<Space>
 nnoremap <leader>e :NERDTreeToggle<CR>
-map <leader>r <Action>(RenameElement)
+map <leader>rn <Action>(RenameElement)
 map <leader>f <Action>(ReformatCode)
-map <leader>. <Action>(CodeInsightEditorActions)
+map ga <Action>(CodeInsightEditorActions)
 map <leader>o <Action>(CloseAllEditorsButActive)
+map <leader>sf <Action>(GotoFile)
+map gi <Action>(GotoImplementation)
+map gr <Action>(ShowUsages)
+vmap = <Action>(ReformatCode)
+nnoremap ]d :action GotoNextError<CR>
+nnoremap [d :action GotoPreviousError<CR>
 vmap K :m '<-2<CR>gv=gv
 vmap J :m '>+1<CR>gv=gv
 nnoremap <C-e> 5<C-e>
@@ -21,6 +27,7 @@ set timeoutlen=1000
 set relativenumber
 set showmode
 set incsearch
+set clipboard+=unnamedplus
 
 " plugins
 set NERDTree
